@@ -10,7 +10,7 @@ from typing import List, TypeVar
 class Auth():
     """a class to manage the API authentication.
     """
-    
+
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """
         a method that returns False - path and excluded_paths will not be used.
