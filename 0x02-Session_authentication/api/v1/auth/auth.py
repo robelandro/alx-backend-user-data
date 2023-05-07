@@ -48,7 +48,7 @@ class Auth():
         a method that returns None - request will not be used.
         """
         return None
-    
+
     def session_cookie(self, request=None):
         """
         a method that returns None - request will not be used.
