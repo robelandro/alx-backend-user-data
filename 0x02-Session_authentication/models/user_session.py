@@ -1,20 +1,16 @@
-#!/user/bin/env python3
-"""UserSession module"""
-
+#!/usr/bin/env python3
+"""User session module.
+"""
 from models.base import Base
 
 
 class UserSession(Base):
-    """UserSession class"""
-    def __init__(self, *args: list, **kwargs: dict):
-        """Constructor"""
-        super().__init__(*args, **kwargs)
-        self.user_id = kwargs.get('user_id', "")
-        self.session_id = kwargs.get('session_id', "")
+    """User session class.
+    """
 
-    def to_json(self, _=None):
-        """to_json method"""
-        json_dict = super().to_json()
-        json_dict['user_id'] = self.user_id
-        json_dict['session_id'] = self.session_id
-        return json_dict
+    def __init__(self, *args: list, **kwargs: dict):
+        """Initializes a User session instance.
+        """
+        super().__init__(*args, **kwargs)
+        self.user_id = kwargs.get('user_id')
+        self.session_id = kwargs.get('session_id')
